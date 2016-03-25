@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Конкурс рисунка</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
+    >
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel='stylesheet' type="text/css" href='/detail.css'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+<header class="header">
+    <div id="logo" style="float:left;">
+        <a href="http://mir24.tv">
+            <img src="http://mir24.tv/media/images/mir2/mir_logo_80.png" alt="24 МИР" title="24 МИР">
+        </a>
+    </div>
+    <div style="margin: auto;">
+        <h1 style="margin: 47px;float: left;">
+            Конкурс рисунка
+        </h1>
+    </div>
+</header>
+<div class="image_container">
+    <img class="image_detail" src="http://konkurs.mir24.tv<?= $targetWork['webPath'] ?>">
+</div>
+<div class="image_info">
+    <span>Имя конкурсанта: <?=$targetWork['participant_name']?></span><br/>
+    <span>Фамилия конкурсанта: <?=$targetWork['participant_surname']?></span><br/>
+    <span>Возраст: <?=$targetWork['age']?> <?=$targetWork['age_string']?></span><br/>
+    <br/>
+    <span>Имя заявителя: <?=$targetWork['declarant_name']?></span><br/>
+    <span>Фамилия заявителя: <?=$targetWork['declarant_surname']?></span><br/>
+    <span></span>
+</div>
+</body>
+
+</html>
