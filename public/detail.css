@@ -1,0 +1,8 @@
+.image_detail {
+    max-width: 600px;
+    float: left;
+}
+
+.image_info {
+    float: right;
+}
