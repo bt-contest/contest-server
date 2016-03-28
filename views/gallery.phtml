@@ -23,7 +23,7 @@
 <div class="clearfix"></div>
 <section id="photos">
     <? foreach ($targetWorks as $key => $value) { ?>
-        <a href="http://localhost:83/competitvework/drawing/<?= $value['idCompetitiveWork'] ?>">
+        <a href="/competitivework/drawing/<?= $value['idCompetitiveWork'] ?>">
             <div class="tooltip"><img src="http://konkurs.mir24.tv<?= $value['webPath'] ?>"/>
                 <span
                     class="tooltiptext"><?= $value['participant'] ?> <?= $value['age'] ?> <?= $value['age_string'] ?></span>
@@ -33,14 +33,14 @@
 </section>
 <div class="pagination">
     <? if (isset($prev_page_offset)) { ?>
-        <a href="http://localhost:83/competitvework/list/40/<?= $prev_page_offset ?>">
+        <a href="/competitivework/list/40/<?= $prev_page_offset ?>">
             <div class="navigation">Предыдущая</div>
         </a>
     <? } else { ?>
         <div class="navigation inactive">Предыдущая</div>
     <? } ?>
     <? if (isset($next_page_offset)) { ?>
-        <a href="http://localhost:83/competitvework/list/40/<?= $next_page_offset ?>">
+        <a href="/competitivework/list/40/<?= $next_page_offset ?>">
             <div class="navigation">Следующая</div>
         </a>
     <? } else { ?>

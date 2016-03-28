@@ -40,7 +40,7 @@ $app->get(
 );
 
 $app->get(
-    '/competitvework/list/{limit}/{offset}',
+    '/competitivework/list/{limit}/{offset}',
     function ($limit, $offset) use ($app, $responder, $logger) {
         $result = array();
         $targetWorks = CompetitiveWork::find(array("limit" => $limit, "offset" => $offset))->toArray();
@@ -67,7 +67,7 @@ $app->get(
     }
 );
 $app->get(
-    '/competitvework/drawing/{id}',
+    '/competitivework/drawing/{id}',
     function ($id) use ($app) {
         $targetWork = CompetitiveWork::findFirst($id)->toArray();
         $participant = Participant::findfirst($targetWork['idParticipant']);
