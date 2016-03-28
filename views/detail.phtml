@@ -35,8 +35,8 @@
             <p>Конкурсант: <?= $targetWork['participant_name'] . ' ' . $targetWork['participant_surname'] ?><br/>
                 Возраст: <?= $targetWork['age'] ?> <?= $targetWork['age_string'] ?></p>
             <? if (1) { ?>
-                <form name="fdfs" method="GET" action="/api/v1/vote">
-                    <input type="hidden" name="work_id" value="<?= $targetWork['idCompetitiveWork'] ?>"/>
+                <form name="fdfs" method="POST" action="/api/v1/vote">
+                    <input type="hidden" name="id_competitive_work" value="<?= $targetWork['idCompetitiveWork'] ?>"/>
                     <input type="submit" class="vote" value="Проголосовать">
                 </form>
             <? } else { ?>
