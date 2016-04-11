@@ -69,19 +69,6 @@
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<header class="header">
-    <div id="logo" style="float:left;">
-        <a href="http://mir24.tv">
-            <img src="http://stream.mirtv.ru/resources/files/uploads/images/mir_logo_80.png" alt="24 МИР"
-                 title="24 МИР">
-        </a>
-    </div>
-    <div style="margin: auto;">
-        <h1 id="contest" style="margin: 60px;float: left;color:#2F508E;">
-            Конкурс рисунка
-        </h1>
-    </div>
-</header>
 <div class='clearfix'></div>
 <h1 class="title">Победители</h1>
 <div class="results">
@@ -90,7 +77,7 @@
         <div class="voting">
             <p>Выбор посетителей</p>
             <? foreach ($finalChild as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -105,7 +92,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestChild as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -124,7 +111,7 @@
         <div class="voting">
             <p>Выбор посетителей</p>
             <? foreach ($finalJunior as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -139,7 +126,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestJunior as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -159,7 +146,7 @@
         <div class="voting">
             <p>Выбор посетителей</p>
             <? foreach ($finalTeen as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -174,7 +161,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestTeen as $key => $participant) { ?>
-                <div class="place pl<?= ++$key ?>"><?= $key ?> место</div>
+                <div class="place-wrap"><div class="place"><?= ++$key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" title="Посмотреть в полном размере" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>

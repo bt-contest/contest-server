@@ -28,8 +28,20 @@ h1.title {
     margin-top: 100px;
 }
 
-.place {
+.place-wrap {
+    color: #FFF;
     text-align: center;
+    border-bottom: 2px solid #FFF;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.place{
+    float:left;
+}
+.votes{
+    float:right;
+    padding
 }
 
 .pl1 {
@@ -79,11 +91,6 @@ h1.title {
     text-align: center;
 }
 
-.place {
-    padding: 10px 0;
-    margin-top: 20px;
-    font-size: 20px;
-}
 
 .thumb {
     top: 0;
@@ -110,7 +117,7 @@ h1.title {
 
 .name:hover {
     cursor: pointer;
-    color: #A6CCFF;
+    text-decoration: underline;
 }
 #logo {
     float: none !important;
@@ -130,7 +137,7 @@ h1.title {
 }
 
 h1.title {
-    margin-top: 50px;
+    margin-top: 100px;
 
 }
 .results{
