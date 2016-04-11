@@ -45,8 +45,16 @@ $app->get(
 $app->get(
     '/gallery/final', function () use ($app) {
         $db = $app->getDI()->getShared("db");
+        $banned_id = array( ); #array of banned id's, needs to be filled
+        
 
-        $sql = "SELECT * FROM final_child LIMIT 3";
+        if (empty($banned_id)) {
+        	$sql = "SELECT * FROM final_child LIMIT 3"; 
+        }
+        else {
+        	$banned_id = implode(',',$banned_id);
+        	$sql = "SELECT * FROM final_child where id_competitive_work NOT IN ($banned_id) LIMIT 3";
+        };
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalChild = $resultSet->fetchAll();
@@ -56,9 +64,15 @@ $app->get(
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalBestChild = $resultSet->fetchAll();
-        $result['finalBestChild'] = $finalBestChild;
+        $result['finalBestChild'] = $finalBestChild; 
 
-        $sql = "SELECT * FROM final_junior LIMIT 3";
+        if (empty($banned_id)) {
+        	$sql = "SELECT * FROM final_junior LIMIT 3";
+        }
+        else {
+        	$banned_id = implode(',',$banned_id);
+        	$sql = "SELECT * FROM final_junior where id_competitive_work NOT IN ($banned_id) LIMIT 3";
+        };
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalJunior = $resultSet->fetchAll();
@@ -70,7 +84,13 @@ $app->get(
         $finalBestJunior= $resultSet->fetchAll();
         $result['finalBestJunior'] = $finalBestJunior;
 
-        $sql = "SELECT * FROM final_teen LIMIT 3";
+        if (empty($banned_id)) {
+        	$sql = "SELECT * FROM final_teen LIMIT 3";
+        }
+        else { 
+        	$banned_id = implode(',',$banned_id);
+        	$sql = "SELECT * FROM final_teen where id_competitive_work NOT IN ($banned_id) LIMIT 3";
+        };
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalTeen = $resultSet->fetchAll();
