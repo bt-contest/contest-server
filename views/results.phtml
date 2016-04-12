@@ -92,7 +92,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestChild as $key => $participant) { ?>
-                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
+                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -126,7 +126,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestJunior as $key => $participant) { ?>
-                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
+                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
@@ -161,7 +161,7 @@
         <div class="redaction">
             <p>Выбор редакции</p>
             <? foreach ($finalBestTeen as $key => $participant) { ?>
-                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="votes"><?='Голосов: '.$participant['COUNT(*)']?></div><div class="clearfix"></div></div>
+                <div class="place-wrap pl<?= ++$key ?>"><div class="place"><?= $key ?> место</div><div class="clearfix"></div></div>
                 <div class="participant">
                     <a href="http://<?= $_SERVER["SERVER_NAME"] ?>/gallery/drawing/<?= $participant['id_competitive_work'] ?>" target="_blank">
                         <div class="thumb"><img src="<?= $participant['web_url'] ?>.resized.<?=pathinfo($participant['web_url'], PATHINFO_EXTENSION)?>"/></div>
