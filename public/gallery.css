@@ -113,7 +113,7 @@
     position:relative;
     float: right;
     margin-top: 47px;
-    margin-right: 120px;
+    margin-right: 60px;
 }
 #searchbox {
     border-bottom-left-radius: 5px;
@@ -155,7 +155,7 @@
 .age-panel{
     margin-top:40px;
     height:60px;
-    width:600px;
+    width: 840px;
     float:left;
 }
 .single {
@@ -176,7 +176,7 @@
     font-size: 25px;
     text-align: center;
     color: white;
-    width: 25%;
+    width: 20%;
     height: 60px;
     float: left;
     border-radius: 6px;
@@ -186,8 +186,12 @@
 }
 @media (max-width: 1700px) {
     .age-panel{
+        width: 840px;
         float:none;
         margin:auto;
+    }
+    .age-range{
+        width:20%;
     }
     #photos{
         margin-top:40px;
@@ -240,7 +244,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 870px) {
     #photos {
 	margin-top: 20px;
         font-size: 1.1em;
@@ -259,7 +263,7 @@
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 580px) {
     .tooltip .tooltiptext {
         font-size: 0.8em;
     }
@@ -267,9 +271,6 @@
         top: 39px;
         left: 4px;
         width: 310px;
-    }
-    .search {
-        width:310px;
     }
     .search, #search-btn, #searchbox, .age-panel {
         width:100%;
@@ -284,7 +285,7 @@
     }
     .age-panel {
         margin-top: 53px;
-        margin-bottom: 125px;
+        margin-bottom: 155px;
     }
     .age-panel a{
         text-decoration: none;
