@@ -60,7 +60,7 @@ $app->get(
         $finalChild = $resultSet->fetchAll();
         $result['finalChild'] = $finalChild;
 
-        $sql = "SELECT * FROM final_child WHERE id_competitive_work IN (4117, 4300, 4314)";
+        $sql = "SELECT * FROM final_child WHERE id_competitive_work IN (1374,2331,5974) ORDER BY FIELD(id_competitive_work,1374,2331,5974)";
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalBestChild = $resultSet->fetchAll();
@@ -78,7 +78,7 @@ $app->get(
         $finalJunior = $resultSet->fetchAll();
         $result['finalJunior'] = $finalJunior;
 
-        $sql = "SELECT * FROM final_junior WHERE id_competitive_work IN (819, 312, 2969)";
+        $sql = "SELECT * FROM final_junior WHERE id_competitive_work IN (1897,4010,2032) ORDER BY FIELD(id_competitive_work,1897,4010,2032)";
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalBestJunior= $resultSet->fetchAll();
@@ -96,7 +96,7 @@ $app->get(
         $finalTeen = $resultSet->fetchAll();
         $result['finalTeen'] = $finalTeen;
 
-        $sql = "SELECT * FROM final_teen WHERE id_competitive_work IN (357, 5309, 1548)";
+        $sql = "SELECT * FROM final_teen WHERE id_competitive_work IN (2892,3481,1635) ORDER BY FIELD(id_competitive_work,2892,3481,1635)";
         $resultSet = $db->query($sql);
         $resultSet->setFetchMode(Phalcon\Db::FETCH_ASSOC);
         $finalBestTeen= $resultSet->fetchAll();
@@ -444,7 +444,7 @@ $app->post(
 
     }
 );
-
+/*
 $app->post(
     '/api/v1/vote',
     function () use ($app, $responder, $servant, $logger) {
@@ -664,7 +664,7 @@ $app->post(
         }
     }
 );
-
+*/
 /**
  * Not found handler
  */
