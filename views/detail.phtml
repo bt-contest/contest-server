@@ -65,14 +65,6 @@
             <div>
                 Голосов: <span id="vote-count"><?= $votes ?></span>
             </div>
-            <div id="buttons">
-                <? if ($canVote) { ?>
-                    <div id="vote-btn" class="vote" data-id="<?= $targetWork['idCompetitiveWork'] ?>">Проголосовать
-                    </div>
-                <? } else { ?>
-                    <div class="no-vote">Вы уже голосовали в этой возрастной категории сегодня</div>
-                <? } ?>
-            </div>
             <br/>
             <span>Поделиться:</span>
             <div class="ya-share2"
